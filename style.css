@@ -1,27 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@100;400;700&display=swap');
-body {
+* {
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url(image/sunny.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  
+}
+
+.cuaca{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  background: transparent;
+  border-radius: 10px;
+  gap: 0.5px;
 }
 
 .container {
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 450px;
+  min-width: 450px;
+  padding: 30px;
+
 }
 
+
 .title {
-  font-weight: 700;
-  font-size: 50px;
+  font-weight: 550;
+  font-size: 40px;
+  letter-spacing: -1.5px;
+  color: #fff;
+
 }
 
 .form-rounded {
-  border-radius: 2em;
+  border-radius: 1em;
 }
 
 .back-card {
@@ -34,7 +54,7 @@ body {
 }
 
 .city-name p {
-  font-size: 16pt;
+  font-size: 12pt;
   font-weight: 200;
   color: #fff;
 }
@@ -50,7 +70,7 @@ body {
 
 .temp span {
   font-weight: 100;
-  font-size: 5em;
+  font-size: 3em;
   letter-spacing: -5px;
   white-space: nowrap;
 }
@@ -65,8 +85,8 @@ body {
 
 .icon-container {
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background-color: #a9a9a9;
 }
 
@@ -83,7 +103,7 @@ body {
 }
 
 .card-bottom p {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 100;
   letter-spacing: -2px;
 }
@@ -96,11 +116,26 @@ body {
   color: white !important;
 }
 
-#map {
-  height: 60vh;
-  width: 60%;
-}
-
 .leaflet-popup-content-wrapper {
   width: 100%;
+}
+
+
+#map{
+  width: 90%;
+  height: 97vh;
+  margin-top: 4vh;
+  border-radius: 12px;
+  display: flex;
+  margin-right: 20vh;
+}
+@media screen and (max-width: 617px) {
+  .cuaca{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #map{
+    height: 400px;
+    margin-left: 5vh;
+    margin-top: 2px;
+  }
 }
